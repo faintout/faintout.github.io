@@ -70,7 +70,7 @@
             // 如果车辆图标已经存在，则直接更新位置
             if (markers.hasOwnProperty(vehicleId)) {
                 markers[vehicleId].setLngLat(newCoordinates);
-                markers[vehicleId].setRotation(rotation+270)
+                markers[vehicleId].setRotation(-rotation)
             } else {
                 // 否则创建新的车辆图标并添加到地图上
                 markers[vehicleId] = createMarker(newCoordinates).addTo(map);
