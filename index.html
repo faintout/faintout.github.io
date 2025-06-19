@@ -114,12 +114,31 @@
         .logo {
             font-size: 3.5rem;
             font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .logo .logo-icon {
+            font-size: 3rem;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+            animation: rocketFloat 3s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        @keyframes rocketFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(2deg); }
+        }
+
+        .logo .logo-text {
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease-out;
         }
 
         .subtitle {
@@ -381,6 +400,11 @@
 
             .logo {
                 font-size: 2.5rem;
+                gap: 12px;
+            }
+
+            .logo .logo-icon {
+                font-size: 2.2rem;
             }
 
             .subtitle {
@@ -418,6 +442,11 @@
         @media (max-width: 480px) {
             .logo {
                 font-size: 2rem;
+                gap: 10px;
+            }
+
+            .logo .logo-icon {
+                font-size: 1.8rem;
             }
 
             .project-card {
@@ -463,7 +492,10 @@
     <div class="container">
         <!-- 头部区域 -->
         <header class="header">
-            <h1 class="logo">🚀 Tech Portfolio</h1>
+            <h1 class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">Tech Portfolio</span>
+            </h1>
             <p class="subtitle">前端开发者的技术作品集</p>
             <div class="author-info">
                 <span class="author-name">by <strong>faintout</strong></span>
